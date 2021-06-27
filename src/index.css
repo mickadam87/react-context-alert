@@ -6,8 +6,71 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@keyframes boxAppears {
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button{
+  display: block;
+  width: 20%;
+  margin-bottom: 1rem;
+}
+
+#alertstack{
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  position: absolute;
+  width:50%;
+  top:1rem;
+  left:25%;
+  height: fit-content;
+  z-index: 2;
+}
+
+.alert{
+  display: flex;
+  margin-bottom: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  animation: boxAppears 6s linear;
+  border-radius: 5px;
+  height: 3rem;
+}
+
+#infobox{
+  color: royalblue;
+  border: 3px solid royalblue;
+}
+
+#successbox{
+  color: green;
+  border: 3px solid green;
+}
+
+#errorbox{
+  color: orangered;
+  border: 3px solid orangered;
 }
